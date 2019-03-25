@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "pcb.h"
+#include <math.h>
 
 int launcher(FILE *ptr, char *fileName);
 double countTotalPages(FILE *input);

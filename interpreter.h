@@ -10,6 +10,7 @@
 #define interpreter_h
 
 #include <stdio.h>
+#include <math.h>
 // These functions are now public
 int quit(void);
 int help(void);

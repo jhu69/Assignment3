@@ -10,6 +10,7 @@
 #define ram_h
 
 #include <stdio.h>
+#include <math.h>
 
 // Simulates OS memory to run processes
 extern FILE *ram[10];

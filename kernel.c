@@ -26,6 +26,7 @@
 #include "memorymanager.h"
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <math.h>
 
 
 // OS boot sequence function that calls all other module init functions for OS initialization
