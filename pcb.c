@@ -22,7 +22,7 @@ void initReadyQueue() {
 }
 
 // Mallocs a PCB for a program
-struct PCB* makePCB(FILE *p, char *name, double maxPages, int frameNum, int pageNum, int offset) {
+struct PCB* makePCB(FILE *p, char *name, int maxPages, int frameNum, int pageNum, int offset) {
     struct PCB *newPCB = (struct PCB*) malloc(sizeof(struct PCB));
     for (int i = 0; i < 10; i++) {
         newPCB->pageTable[i] = '\0';

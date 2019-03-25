@@ -55,15 +55,15 @@ int launcher(FILE *ptr, char *fileName) {
         printf("\nNull file pointer!\n");
         return 0;
     }
-    double maxPages = countTotalPages(countPages);
+    int maxPages = countTotalPages(countPages);
     myInit(copy, fileName, maxPages);
     closedir(bStore);
     return 1;
 }
 
-double countTotalPages(FILE *input) {
+int countTotalPages(FILE *input) {
     int lineCounter = 0;
-    double pageNum = 0;
+    int pageNum = 0;
     char tmp;
     printf("\nStarting the count process!");
     tmp = fgetc(input);
@@ -80,12 +80,10 @@ double countTotalPages(FILE *input) {
     tmp = '\0';
     if ((lineCounter % 4) == 0) {
         pageNum = (lineCounter/4);
-        printf("Max pages needed by program: %lf\n", pageNum);
+        printf("Max pages needed by program: %d\n", pageNum);
     } else {
-        double reformated = (((double)lineCounter)/4.0);
-        //printf("\n%lf\n\n", reformated);
-        pageNum = ceil(reformated);
-        printf("Max pages needed by program: %lf\n", pageNum);
+        pageNum = ((lineCounter/4) + 1);
+        printf("Max pages needed by program: %d\n", pageNum);
         //printf("\n%lf\n\n", pageNum);
     }
     fclose(input);

@@ -69,7 +69,7 @@ void printPCB() {
 // Kernel's initialization function to load file ptr into ram, malloc a PCB, and set file ptr to PCB's
 // Program counter, load PCB into Ready Queue
 // Added an extra field to makePCB to keep track of which prog I'm running 
-void myInit(FILE *p, char *pcbName, double maxPages) {
+void myInit(FILE *p, char *pcbName, int maxPages) {
     int frameNum = addToRAM(p);
     struct PCB* newPCB = makePCB(p, pcbName, maxPages, frameNum, 1, 0);
     addToReady(newPCB);

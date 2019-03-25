@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 
-void myInit(FILE *p, char *pcbName, double maxPages);
+void myInit(FILE *p, char *pcbName, int maxPages);
 void printPCB(void);
 void scheduler(void);
 

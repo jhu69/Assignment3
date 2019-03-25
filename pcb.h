@@ -22,14 +22,14 @@ struct PCB {
     // This tracks which page and offset the program is currently at, and total number of pages in this program
     int PC_page;
     int PC_offset;
-    double pages_max;
+    int pages_max;
     struct PCB *next;
     char *name;
 };
 
 // Method instantiations that are "public"
 void initReadyQueue(void);
-struct PCB* makePCB(FILE *p, char *name, double maxPages, int frameNum, int pageNum, int offset);
+struct PCB* makePCB(FILE *p, char *name, int maxPages, int frameNum, int pageNum, int offset);
 void enqueue(struct PCB* pcb);
 struct PCB* dequeue(void);
 bool isReadyQueueEmpty(void);

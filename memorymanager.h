@@ -14,7 +14,7 @@
 #include <math.h>
 
 int launcher(FILE *ptr, char *fileName);
-double countTotalPages(FILE *input);
+int countTotalPages(FILE *input);
 FILE *findPage(int pageNum, FILE *input);
 int findFrame(void);
 int findVictim(struct PCB *p);
